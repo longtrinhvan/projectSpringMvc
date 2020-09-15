@@ -1,5 +1,7 @@
 package com.springmvc.config;
 
+import java.util.Properties;
+
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
@@ -32,5 +34,12 @@ public class JPAConfig {
 		dataSource.setUsername("root");
 		dataSource.setPassword("123456");
 		return dataSource;
+	}
+	
+	Properties additionalProperties() {
+		Properties properties = new Properties();
+		properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+		//properties.setProperty("hibernate.hbm2ddl.auto", "none");
+		return properties;
 	}
 }
