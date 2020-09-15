@@ -9,25 +9,21 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 import com.springmvc.dao.GenericDAO;
 import com.springmvc.mapper.RowMapper;
 
 public class AbstractDAO<T> implements GenericDAO<T> {
 
-//	ResourceBundle mybundle = ResourceBundle.getBundle("db");
+	ResourceBundle mybundle = ResourceBundle.getBundle("db");
 
 	public Connection getConnection() {
 		try {
-//			Class.forName(mybundle.getString("driverName"));
-//			String url = mybundle.getString("url");
-//			String user = mybundle.getString("user");
-//			String password = mybundle.getString("password");
-			
-			Class.forName("com.mysql.jdbc.Driver");
-			String url ="jdbc:mysql://localhost:3306/jspservletjdbc";
-			String user = "root";
-			String password = "123456";
+			Class.forName(mybundle.getString("driverName"));
+			String url = mybundle.getString("url");
+			String user = mybundle.getString("user");
+			String password = mybundle.getString("password");
 			return DriverManager.getConnection(url, user, password);
 		} catch (ClassNotFoundException | SQLException e) {
 			return null;

@@ -1,6 +1,6 @@
 package com.springmvc.paging;
 
-import com.springmvc.sort.Sorter;
+import com.sprngmvc.sort.Sorter;
 
 public class PageRequest implements Pageble {
 
