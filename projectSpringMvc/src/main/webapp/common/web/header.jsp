@@ -1,23 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-	<div class="container">
-		<a class="navbar-brand" href="#">Start Bootstrap</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarResponsive" aria-controls="navbarResponsive"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Services</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-			</ul>
+<!-- header -->
+
+<header class="header">
+	<div class="header__menu">
+		<!-- new-name -->
+		<div class="header__menu--new-name">
+			<a href="<c:url value ='trang-chu'/>">NEWS</a>
 		</div>
+		<!-- category-new -->
+		<div class="header__menu header__menu--category-new">
+			<a href="#">TIN NÓNG</a> <a href="#">TIN MỚI</a> <a href="#">CHỦ
+				ĐỀ</a> <a href="#">VIDEO</a>
+		</div>
+		<!-- search-new -->
+		<div class="header__menu header__menu--search-new">
+			<input type="text" id="fname" name="fname">
+			<div class="icon-search">
+				<i class="fas fa-search"></i>
+			</div>
+		</div>
+		<!-- account-new -->
+		<div class="header__menu header__menu--account-new">
+			<div class="account">
+			<c:if test="${not empty USERMODEL}">
+				<i class="fas fa-user-circle"></i> <a href="<c:url value ='thoat?action=logout'/>">Xin chào</a>
+			</c:if>
+			<c:if test="${empty USERMODEL}">
+				<i class="fas fa-user-circle"></i> <a href="<c:url value ='dang-nhap?action=login'/>">Tài
+					khoản</a>
+			</c:if>
+			</div>
+		</div>
+		<!--Responsive-->
 	</div>
-</nav>
+	<div class="header__banner">
+		<img src="<c:url value='/template/picture/banner.jpg'/>">
+	</div>
+</header>
