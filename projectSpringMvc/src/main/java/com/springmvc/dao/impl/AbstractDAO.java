@@ -16,14 +16,12 @@ import com.springmvc.mapper.RowMapper;
 
 public class AbstractDAO<T> implements GenericDAO<T> {
 
-	ResourceBundle mybundle = ResourceBundle.getBundle("db");
-
 	public Connection getConnection() {
 		try {
-			Class.forName(mybundle.getString("driverName"));
-			String url = mybundle.getString("url");
-			String user = mybundle.getString("user");
-			String password = mybundle.getString("password");
+			Class.forName("com.mysql.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/jspservletjdbc";
+			String user = "root";
+			String password = "123456";
 			return DriverManager.getConnection(url, user, password);
 		} catch (ClassNotFoundException | SQLException e) {
 			return null;
