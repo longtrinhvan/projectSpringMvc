@@ -26,7 +26,7 @@
 <link href="<c:url value='/template/admin/css/adminEditNew.css' />"
 	rel="stylesheet" type="text/css" media="all" />
 
-<script src="<c:url value='/ckeditor/ckeditor.js'/>"></script>
+<script src="<c:url value='/template/ckeditor/ckeditor.js'/>"></script>
 </head>
 <body>
 	<!-- header -->
