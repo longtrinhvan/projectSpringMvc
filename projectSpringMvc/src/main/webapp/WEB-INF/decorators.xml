@@ -7,7 +7,7 @@
     
     <!-- apply Sitemesh default template -->
     <decorator name="admin" page="admin.jsp">
-        <pattern>/admin*</pattern>
+        <pattern>/quan-tri*</pattern>
     </decorator>
     
     <decorator name="web" page="web.jsp">

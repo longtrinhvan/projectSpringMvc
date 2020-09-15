@@ -8,12 +8,12 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller(value = "newControllerOfAdmin")
 public class NewController {
 
-	@RequestMapping(value = "/new/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/quan-tri/bai-viet/danh-sach", method = RequestMethod.GET)
 	public ModelAndView showsList() {
 		ModelAndView mav = new ModelAndView("admin/new/list");
 		return mav;
 	}
-	@RequestMapping(value = "/new/edit", method = RequestMethod.GET)
+	@RequestMapping(value = "/quan-tri/bai-viet/chinh-sua", method = RequestMethod.GET)
 	public ModelAndView eidtNew() {
 		ModelAndView mav = new ModelAndView("admin/new/edit");
 		return mav;
