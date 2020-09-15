@@ -9,7 +9,6 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
 import com.springmvc.dao.GenericDAO;
 import com.springmvc.mapper.RowMapper;
@@ -31,7 +30,7 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 	@Override
 	public List<T> query(String sql, RowMapper<T> rowMapper, Object... parameters) {
 		List<T> results = new ArrayList<>();
-		Connection connection = getConnection();
+		Connection connection = null;
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
 		try {
