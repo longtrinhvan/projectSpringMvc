@@ -27,7 +27,7 @@
 				<i class="fas fa-user-circle"></i> <a href="<c:url value ='thoat?action=logout'/>">Xin chào</a>
 			</c:if>
 			<c:if test="${empty USERMODEL}">
-				<i class="fas fa-user-circle"></i> <a href="<c:url value ='dang-nhap?action=login'/>">Tài
+				<i class="fas fa-user-circle"></i> <a href="<c:url value ='dang-nhap'/>">Tài
 					khoản</a>
 			</c:if>
 			</div>

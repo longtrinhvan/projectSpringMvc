@@ -14,16 +14,16 @@
 			<div class="body-center__login--title">
 				<i class="fas fa-user-alt"></i>
 			</div>
-			<form action="<c:url value='/dang-nhap?action=login'/>"
+			<form action="/j_spring_security_check"
 				id="formLogin" method="post">
 				<div class="user-Name">
 					<label class="user-Name--label">Tên Đăng Nhập</label> <input
-						type="text" placeholder="Nhập tên đăng nhập" name="userName"
+						type="text" placeholder="Nhập tên đăng nhập" name="j_username"
 						required>
 				</div>
 				<div class="password">
 					<label class="password--label">Mật khẩu</label> <input
-						type="password" placeholder="Nhập mật khẩu" name="password"
+						type="password" placeholder="Nhập mật khẩu" name="j_passwords"
 						required>
 				</div>
 				<div class="submit-login">
